@@ -9,3 +9,5 @@ Fertility eurostat page (Base project off this report): https://ec.europa.eu/eur
 https://www.cbs.nl/en-gb/news/2024/18/women-in-the-eu-having-first-child-ever-later-in-life
 
 https://ec.europa.eu/eurostat/web/products-eurostat-news/-/ddn-20210224-1
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3000017/
