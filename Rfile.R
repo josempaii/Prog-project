@@ -1,5 +1,4 @@
 
-
 ###### TIDYVERSE #######
 
 library(tidyverse)
@@ -60,5 +59,22 @@ line_chart <- ggplot(filtered_df, aes(x = year, y = average_age, color = region,
 #######BAR CHART COMP 3 REGIONS##########
 #########################################
 
-
+bar_chart <- ggplot(filtered_df, aes(x = factor(year), y = average_age - 28, fill = region)) +
+  geom_col(position = "dodge", width = 0.7) + 
+  labs(
+    title = "Average Age at Childbirth: Italy, Netherlands and EU (2014, 2020, 2023)",
+    x = "Year",
+    y = "Average Age of Women at Childbirth",
+    fill = "Region" 
+  ) +
+  scale_y_continuous(limits = c(0, 5), labels = function(x) x + 28) + 
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 16), 
+    axis.title = element_text(size = 12), 
+    axis.text = element_text(size = 10), 
+    legend.position = "bottom", 
+    legend.title = element_text(face = "bold"), 
+    panel.grid.minor = element_blank() 
+  )
 
