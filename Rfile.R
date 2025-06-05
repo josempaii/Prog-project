@@ -1,6 +1,16 @@
+
+
+###### TIDYVERSE #######
+
 library(tidyverse)
 
+######## IMPORTING DATASET ########
+
 df <- read_csv("rawdata")
+
+##########################
+######FILTERING DATA######
+##########################
 
 filtered_df <- df %>%
   filter(
@@ -16,9 +26,14 @@ filtered_df <- df %>%
     average_age = OBS_VALUE
   ) %>%
   
+#######TRANSFORMING AGE INTO NUMERING VALUE#######
   mutate(
     average_age = as.numeric(average_age)
   )  
+
+#########################
+##### LINE CHART#########
+#########################
 
 line_chart <- ggplot(filtered_df, aes(x = year, y = average_age, color = region, group = region)) +
   geom_line(linewidth = 1.2) + 
@@ -40,4 +55,10 @@ line_chart <- ggplot(filtered_df, aes(x = year, y = average_age, color = region,
     legend.title = element_text(face = "bold"), 
     panel.grid.minor = element_blank() 
   )
+
+#########################################
+#######BAR CHART COMP 3 REGIONS##########
+#########################################
+
+
 
